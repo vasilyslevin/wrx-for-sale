@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2002 Subaru WRX For Sale | Gainesville, FL | $15,000 OBO</title>
+  <meta name="description" content="Purpose-built 2002 Subaru WRX sedan. EJ257 full rebuild, ID1050x, custom tune, rally suspension, skid plates, winch, tow hitch. $15,000 OBO in Gainesville FL." />
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --surface: #161616;
+      --border: #2a2a2a;
+      --accent: #c0392b;
+      --accent2: #e74c3c;
+      --text: #e8e8e8;
+      --muted: #888;
+      --gold: #f0c040;
+      --radius: 8px;
+      --max: 900px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    a { color: var(--accent2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .hero {
+      background: linear-gradient(135deg, #1a0000 0%, #0d0d0d 60%);
+      border-bottom: 3px solid var(--accent);
+      padding: 60px 20px 50px;
+      text-align: center;
+    }
+    .hero .badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .hero h1 span { color: var(--accent2); }
+    .hero .subtitle { font-size: 1.1rem; color: var(--muted); margin-bottom: 28px; }
+    .price-row { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 28px; }
+    .price-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 28px;
+      text-align: center;
+    }
+    .price-card .label { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+    .price-card .amount { font-size: 2rem; font-weight: 800; color: var(--gold); }
+    .price-card .sub { font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
+    .cta-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 36px;
+      border-radius: var(--radius);
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: var(--accent2); text-decoration: none; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+    .gallery-section {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 12px;
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    .gallery-grid img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+    .gallery-grid .placeholder {
+      background: #1e1e1e;
+      border: 2px dashed var(--border);
+      border-radius: var(--radius);
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .gallery-grid .placeholder .icon { font-size: 2rem; }
+    .tagline-section { padding: 50px 20px; text-align: center; border-bottom: 1px solid var(--border); }
+    .tagline-section blockquote {
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .tagline-section blockquote strong { color: var(--gold); font-style: normal; }
+    section { padding: 50px 20px; border-bottom: 1px solid var(--border); }
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--accent2);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .basics-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+    .basics-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      display: flex;
+      flex-direction: column;
+    }
+    .basics-item .key { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+    .basics-item .val { font-weight: 600; font-size: 1rem; }
+    .spec-group { margin-bottom: 28px; }
+    .spec-group h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+    ul.spec-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    ul.spec-list li { padding-left: 18px; position: relative; font-size: 0.95rem; }
+    ul.spec-list li::before { content: '&#9656;'; color: var(--accent2); position: absolute; left: 0; top: 0; }
+    ul.spec-list li strong { color: #fff; }
+    .callout {
+      background: var(--surface);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 18px 22px;
+      margin: 20px 0;
+      font-size: 0.95rem;
+    }
+    .callout strong { color: var(--gold); }
+    ol.steps { list-style: none; counter-reset: steps; display: flex; flex-direction: column; gap: 10px; }
+    ol.steps li { counter-increment: steps; display: flex; gap: 14px; font-size: 0.95rem; }
+    ol.steps li::before {
+      content: counter(steps);
+      background: var(--accent);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.8rem;
+      min-width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    thead th {
+      background: var(--accent);
+      color: #fff;
+      text-align: left;
+      padding: 10px 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:hover { background: #1a1a1a; }
+    tbody td { padding: 9px 14px; vertical-align: top; }
+    tbody td:last-child { color: var(--gold); font-weight: 600; white-space: nowrap; }
+    .why-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+    .terms-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+    .terms-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      text-align: center;
+    }
+    .terms-card .icon { font-size: 2rem; margin-bottom: 8px; }
+    .terms-card .label { font-size: 0.85rem; color: var(--muted); margin-bottom: 4px; }
+    .terms-card .val { font-weight: 700; font-size: 0.95rem; }
+    .contact-section {
+      background: linear-gradient(135deg, #1a0000, #0d0d0d);
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .contact-section h2 { font-size: 2rem; font-weight: 800; margin-bottom: 10px; }
+    .contact-section > .container > p { color: var(--muted); margin-bottom: 28px; }
+    form.contact-form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      text-align: left;
+    }
+    form.contact-form input,
+    form.contact-form textarea {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.95rem;
+      padding: 12px 16px;
+      width: 100%;
+      transition: border-color 0.2s;
+    }
+    form.contact-form input:focus,
+    form.contact-form textarea:focus { outline: none; border-color: var(--accent2); }
+    form.contact-form textarea { min-height: 120px; resize: vertical; }
+    form.contact-form button {
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    form.contact-form button:hover { background: var(--accent2); }
+    .form-note { font-size: 0.8rem; color: var(--muted); text-align: center; margin-top: -6px; }
+    nav.sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13,13,13,0.97);
+      border-bottom: 1px solid var(--border);
+      padding: 0 20px;
+      backdrop-filter: blur(8px);
+    }
+    nav.sticky-nav ul { display: flex; list-style: none; max-width: var(--max); margin: 0 auto; overflow-x: auto; }
+    nav.sticky-nav ul li a {
+      display: block;
+      padding: 14px 16px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+    nav.sticky-nav ul li a:hover { color: var(--accent2); text-decoration: none; }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+    }
+    @media (max-width: 600px) {
+      .price-row { flex-direction: column; align-items: center; }
+      .price-card { width: 100%; max-width: 320px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <ul>
+    <li><a href="#basics">Basics</a></li>
+    <li><a href="#transmission">Trans</a></li>
+    <li><a href="#engine">Engine</a></li>
+    <li><a href="#fuel">Fuel</a></li>
+    <li><a href="#turbo">Turbo</a></li>
+    <li><a href="#suspension">Suspension</a></li>
+    <li><a href="#brakes">Brakes</a></li>
+    <li><a href="#wheels">Wheels</a></li>
+    <li><a href="#exterior">Exterior</a></li>
+    <li><a href="#electrical">Electrical</a></li>
+    <li><a href="#included">Included</a></li>
+    <li><a href="#parts-value">Parts Value</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="badge">For Sale &mdash; Gainesville, FL</div>
+  <h1>2002 Subaru <span>WRX</span></h1>
+  <p class="subtitle">Street / Rally / Track &nbsp;&bull;&nbsp; EJ257 Full Rebuild &nbsp;&bull;&nbsp; Custom Tune &nbsp;&bull;&nbsp; Second Owner</p>
+  <div class="price-row">
+    <div class="price-card">
+      <div class="label">Asking Price</div>
+      <div class="amount">$15,000</div>
+      <div class="sub">OBO</div>
+    </div>
+    <div class="price-card">
+      <div class="label">Right Buyer</div>
+      <div class="amount">$12,000</div>
+      <div class="sub">Race it / offroad it / build on it</div>
+    </div>
+    <div class="price-card">
+      <div class="label">Worth in Parts + Labor</div>
+      <div class="amount">$20,000+</div>
+      <div class="sub">Priced below build cost</div>
+    </div>
+  </div>
+  <a href="#contact" class="cta-btn">Contact About This Car</a>
+</div>
+
+<div class="tagline-section">
+  <div class="container">
+    <blockquote>
+      A tank that can take you from A to B to C to D. Pull your boat or trailer. Get your groceries.
+      Drive through mud, sand, and rocks. <strong>Win the race on the weekend.</strong>
+      <br><br>
+      Purpose-built, professionally assembled, street/rally/track machine built to last 10 more years
+      of hard use with basic maintenance. Every part researched, triple-verified, and installed by a
+      builder with hands-on experience building Mitsubishi Evos, Nissan R32/R33 GT-Rs, and Audi R8.
+    </blockquote>
+  </div>
+</div>
+
+<div class="gallery-section">
+  <div class="container">
+    <div class="section-title" style="justify-content:center;margin-bottom:24px;">Photos</div>
+    <div class="gallery-grid">
+      <div class="placeholder"><span class="icon">&#128248;</span>Front / Bumper</div>
+      <div class="placeholder"><span class="icon">&#128248;</span>Engine Bay</div>
+      <div class="placeholder"><span class="icon">&#128248;</span>Carbon Hood + Latches</div>
+      <div class="placeholder"><span class="icon">&#128248;</span>FMIC + Trans Cooler</div>
+      <div class="placeholder"><span class="icon">&#128248;</span>Wheels + Brakes</div>
+      <div class="placeholder"><span class="icon">&#128248;</span>Interior / Gauge</div>
+      <div class="placeholder"><span class="icon">&#128248;</span>Underside / Skid Plates</div>
+      <div class="placeholder"><span class="icon">&#128248;</span>Hitch + Winch</div>
+    </div>
+    <p style="color:var(--muted);font-size:0.85rem;margin-top:18px;">
+      Create an <code>images/</code> folder, upload photos, then replace each placeholder div with<br>
+      <code>&lt;img src="images/filename.jpg" alt="description"&gt;</code>
+    </p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="section-title">Why I Am Selling</div>
+    <div class="why-card">
+      I had an ischemic stroke in 2021. I can no longer race or do contact sports. This car was built for exactly
+      that purpose. It deserves an owner who will use what it was built to do. The right buyer should get a machine
+      like this at a fair price rather than see it sit.
+    </div>
+  </div>
+</section>
+
+<section id="basics">
+  <div class="container">
+    <div class="section-title">The Basics</div>
+    <div class="basics-grid">
+      <div class="basics-item"><span class="key">Year / Make / Model</span><span class="val">2002 Subaru Impreza WRX Sedan</span></div>
+      <div class="basics-item"><span class="key">Chassis Miles</span><span class="val">97,000</span></div>
+      <div class="basics-item"><span class="key">Engine Miles</span><span class="val">~50 miles since full professional rebuild</span></div>
+      <div class="basics-item"><span class="key">Owners</span><span class="val">Second owner</span></div>
+      <div class="basics-item"><span class="key">First Owner</span><span class="val">Ford parts manager, daily commuter, meticulous maintenance</span></div>
+      <div class="basics-item"><span class="key">Title</span><span class="val">Clean, in hand, same-day transfer</span></div>
+      <div class="basics-item"><span class="key">Transmission</span><span class="val">4EAT P2V1 Automatic</span></div>
+      <div class="basics-item"><span class="key">Condition</span><span class="val">Fully runs and drives. No leaks, no oil consumption.</span></div>
+      <div class="basics-item"><span class="key">Location</span><span class="val">Gainesville, Florida</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="transmission">
+  <div class="container">
+    <div class="section-title">Transmission: Why the 4EAT P2V1</div>
+    <div class="callout">
+      Most people assume the 5MT is better. They are wrong for this application. The 4EAT P2V1 handles approximately
+      <strong>500 HP</strong> and splits torque <strong>45/55 front/rear</strong>, similar to the STI manual.
+      See <a href="https://xcceleration.com/4EAT-101.htm" target="_blank" rel="noopener">xcceleration.com/4EAT-101.htm</a>.
+    </div>
+    <div class="spec-group">
+      <h3>Upgrades</h3>
+      <ul class="spec-list">
+        <li><strong>RatioTek HD valve body</strong> - robust internals, fast shifts under boost, safe for high-power use</li>
+        <li>Front Hayden transmission cooler with dedicated filter</li>
+        <li>Valvoline full-synthetic ATF</li>
+        <li>Redline full-synthetic gear fluid in front and rear differentials</li>
+        <li>Custom poly billet transmission mount by Kein</li>
+        <li>Rear LSD</li>
+      </ul>
+    </div>
+    <div class="spec-group">
+      <h3>How to Drive It</h3>
+      <ul class="spec-list">
+        <li>Fast shifts under boost: stamp the throttle in one quick firm motion. Do not modulate.</li>
+        <li>Drive with left-foot braking</li>
+        <li>Launch at <strong>3,600 RPM</strong> for maximum torque converter lockup</li>
+        <li>Daily: D range for early upshifts and fuel economy</li>
+        <li>Spirited/corners: 2nd range, then manually shift to 3rd</li>
+      </ul>
+    </div>
+    <div class="spec-group">
+      <h3>ECU Reset and Transmission Training</h3>
+      <ol class="steps">
+        <li>Unplug the negative battery cable.</li>
+        <li>Press the brake pedal three times to discharge capacitors.</li>
+        <li>Reconnect the negative cable.</li>
+        <li>Start the car. Drive in 1st gear, revving to redline for approximately 5 minutes.</li>
+        <li>Drive aggressively through all ranges. Resets adaptive ECU learning and trains the transmission for this tune and valve body.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="engine">
+  <div class="container">
+    <div class="section-title">Engine</div>
+    <div class="spec-group">
+      <h3>Block</h3>
+      <ul class="spec-list">
+        <li>EJ257 semi-closed deck, nitrided STI crank</li>
+        <li>Killer B Motorsport oil baffle and pickup combo, large oil pump</li>
+        <li>Head studs, OEM fire ring head gaskets, all new OEM and OEM+ gaskets throughout</li>
+        <li>No oil leaks, no oil consumption. No AOS required.</li>
+      </ul>
+    </div>
+    <div class="spec-group">
+      <h3>Heads</h3>
+      <ul class="spec-list">
+        <li>S20V large port heads, billet half-moons</li>
+        <li>IAG 8mm phenolic TGV spacers, IAG billet TGV housings, ported intake manifold</li>
+      </ul>
+    </div>
+    <div class="spec-group">
+      <h3>Rotating Assembly</h3>
+      <ul class="spec-list">
+        <li>Fluidampr EJ Series steel harmonic balancer (P/N 531101)</li>
+        <li>All new front and rear seals, new water pump with billet water pump tube</li>
+        <li>Oil warmer deleted</li>
+      </ul>
+    </div>
+    <div class="spec-group">
+      <h3>Timing</h3>
+      <ul class="spec-list">
+        <li>IAG Kevlar racing timing belt kit (IAG Red Racing Belt, all idlers and tensioner)</li>
+        <li>TIC cam sprocket bolts. All rotating assemblies new.</li>
+      </ul>
+    </div>
+    <div class="spec-group">
+      <h3>Cooling</h3>
+      <ul class="spec-list">
+        <li>Double-row aluminum radiator, high-pressure caps, fins clean and straight</li>
+        <li>Billet overflow tank, right side of radiator</li>
+        <li>Zerex Asian Vehicle Blue 50/50 coolant (silicate-free spec for EJ engines)</li>
+        <li>Subaru OEM coolant conditioner + Water Wetter</li>
+        <li>Genuine Subaru thermostat and gasket kit, Cylinder 4 cooling modification</li>
+      </ul>
+    </div>
+    <div class="spec-group">
+      <h3>Tune</h3>
+      <ul class="spec-list">
+        <li>Custom map by a specialist mechanical engineer with two additional Subaru experts</li>
+        <li>~<strong>28 MPG highway</strong>, fuel savings at idle</li>
+        <li><strong>Flex fuel capable:</strong> more boost on E85 via fuel enrichment, not timing retard</li>
+        <li>Conservative on 93 octane for pump-gas reliability</li>
+        <li><strong>Speed-density (MAP-based):</strong> no MAF</li>
+        <li>Previous EJ205: ~320 WHP / 380 TQ, 0-60 in 4 seconds on E85. Current EJ257 is definitively more powerful.</li>
+        <li>Revs to approximately <strong>8,000 to 9,000 RPM</strong></li>
+      </ul>
+    </div>
+    <div class="spec-group">
+      <h3>Break-In</h3>
+      <ul class="spec-list">
+        <li>Lucas SAE 30 break-in oil with Purolator for first 1,000 miles</li>
+        <li>Switch to Motul 300V 15W-50 with Mazda N3R1-14-302 filter after. Full supply included.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="fuel">
+  <div class="container">
+    <div class="section-title">Fuel System</div>
+    <ul class="spec-list">
+      <li>Injector Dynamics ID1050x, 1065cc/min, plug-and-play Subaru fitment</li>
+      <li>Aeromotive 10-micron microglass fuel filter, full housing</li>
+      <li>Aeromotive A1000 EFI fuel pressure regulator, return-style</li>
+      <li>IAG V3 top-feed billet fuel rails (red) with IAG PTFE stainless braided fuel lines</li>
+      <li>Direct-wired 400 LPH high-pressure fuel pump, corrosion-sealed tank</li>
+      <li>Genuine Subaru fuel tank O-ring replaced at install</li>
+      <li>40T Performance billet 6061 E85 flex fuel sensor bypass module (6AN and 8AN fittings)</li>
+      <li>GM 3-wire E85 flex fuel sensor</li>
+      <li>Denso 234-5137 wideband AFR sensor</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title">Induction</div>
+    <ul class="spec-list">
+      <li>Mishimoto MMAB-WRX-01 enclosed airbox, caged and sealed to outside air</li>
+      <li>K&amp;N PL-1003 high-flow filter with FILTERWEARS sand and water protective sock</li>
+      <li>AMR Performance cast turbo inlet pipe, powder coated, includes 2.4" and 3" couplers</li>
+      <li>IAG MAP sensor adapter, red finish</li>
+      <li>IAT sensor with heat-protected mount into TB silicone coupler</li>
+    </ul>
+  </div>
+</section>
+
+<section id="turbo">
+  <div class="container">
+    <div class="section-title">Turbo, Boost, and Exhaust</div>
+    <ul class="spec-list">
+      <li><strong>Turbo:</strong> OEM TD04, pristine, sized to maximize ID1050x injector range</li>
+      <li><strong>FMIC:</strong> Custom professional large bar-and-plate front-mount intercooler, heat-protected pipes, layered silicone couplers</li>
+      <li>Front bumper protection netting around entire bumper face</li>
+      <li><strong>BOV:</strong> Stock unit, modified for longevity</li>
+      <li><strong>Uppipe:</strong> GrimmSpeed EJ 2-bolt flex uppipe, 321 SS flex joint, 14-gauge 304 SS primary, lifetime warranty</li>
+      <li><strong>Headers:</strong> Tomei Expreme Equal Length Exhaust Manifold, 4-2-1, SUS304 stainless, lost-wax cast collector</li>
+      <li><strong>Downpipe:</strong> Invidia 3" bellmouth catless divorced downpipe with extra O2 bung, 304 stainless</li>
+      <li>Straight pipe from downpipe to stock muffler, flush connectors for easy access</li>
+      <li><strong>Boost control:</strong> GrimmSpeed 3-port electronic boost control solenoid</li>
+      <li><strong>Heat management:</strong> DEI turbo blanket, downpipe wrap, IAG braided SS turbo-feed lines</li>
+    </ul>
+  </div>
+</section>
+
+<section id="suspension">
+  <div class="container">
+    <div class="section-title">Suspension</div>
+    <ul class="spec-list">
+      <li>KYB AGX adjustable shocks with JDM 2004 STI springs</li>
+      <li>Genuine Subaru Group N front strut mounts, B0310FE000 (2 pairs)</li>
+      <li>Whiteline big sway bar front and rear, Kartboy front and rear sway bar end links</li>
+      <li>STI front upper and lower control arms, STI steering knuckles</li>
+      <li>JDM top brace, front brace, and under brace (rear brace optional, included)</li>
+      <li>Whiteline adjustable rear arms</li>
+      <li>All bushings polyurethane: Nolathane and Whiteline throughout</li>
+      <li>Professional alignment with correct racing offsets</li>
+      <li>OEM CV axles with serviceable boots and joints</li>
+    </ul>
+  </div>
+</section>
+
+<section id="brakes">
+  <div class="container">
+    <div class="section-title">Brakes</div>
+    <ul class="spec-list">
+      <li><strong>Front:</strong> 4-pot calipers with cooling paths preserved</li>
+      <li><strong>Rotors:</strong> ACDelco Silver front, DuraGo rear vented</li>
+      <li><strong>Pads:</strong> MAGMA ceramic front and rear</li>
+      <li><strong>Lines:</strong> Chase Bays stainless braided relocation kit (02-07 WRX/STI w/OEMC)</li>
+      <li><strong>Cylinder brace:</strong> GrimmSpeed brake cylinder brace</li>
+      <li><strong>Bias:</strong> Chase Bays R/F brake bias controller, 2-way valve</li>
+      <li><strong>ABS:</strong> Chase Bays ABS delete kit - removed for more controlled, consistent braking</li>
+      <li>ATE TYP 200 DOT 4 racing brake fluid</li>
+    </ul>
+  </div>
+</section>
+
+<section id="wheels">
+  <div class="container">
+    <div class="section-title">Wheels, Tires, and Offroad</div>
+    <div class="spec-group">
+      <h3>Wheels and Tires</h3>
+      <ul class="spec-list">
+        <li><strong>Wheels:</strong> Method MR502 VT-Spec 2, 15x7 5x100 +15mm, forged A356 aluminum. Developed for the Factory Subaru Rally Team. 2,100 lb per-wheel load rating. Clears 4-pot brakes.</li>
+        <li><strong>5th wheel:</strong> Extra forged Method MR502 Rally 15" spare</li>
+        <li><strong>Tires:</strong> Michelin CrossClimate Directional Commercial, all-surface all-season. Balance beads, resistant valves, short stem air valves.</li>
+        <li><strong>Spare:</strong> Michelin X-CLIMATE Directional 94T, sealed trunk-adapted mount</li>
+        <li><strong>Lug nuts:</strong> Motegi</li>
+      </ul>
+    </div>
+    <div class="spec-group">
+      <h3>Offroad and Recovery</h3>
+      <ul class="spec-list">
+        <li>1/4" T6061 aluminum skid plates: front frame, transmission, and rear differential</li>
+        <li>3M rubber undercoating throughout underside</li>
+        <li>OEM new wheel well liners, fender inserts, full underbody liner set</li>
+        <li>CURT 113183 Class 1 hitch, 1-1/4" receiver, 2,000 lb tow rated</li>
+        <li>Extreme Max universal 1.25" hitch winch mount</li>
+        <li>3,000 lb 12V electric winch with synthetic rope and wireless remote</li>
+        <li>Sand bars, mud traversal plates, tire deflators, anti-bump strips front and rear</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="exterior">
+  <div class="container">
+    <div class="section-title">Exterior</div>
+    <ul class="spec-list">
+      <li>JDM 2004 STI front bumper and JDM black front grille</li>
+      <li>Seibon CWII carbon fiber hood with AeroCatch flush-mount locking latches</li>
+      <li>Depo 320-1115P-US2 retrofitted black-trim headlights with HID projectors</li>
+      <li>Monstaliner roll-on bedliner coating on exterior body surfaces</li>
+      <li>Hella fog lights with yellow spectrum fog bulbs</li>
+      <li>Silicone PIAA wipers, Nextzett Kristall Klar windshield fluid, windshield coated</li>
+      <li>Front bumper protection netting</li>
+    </ul>
+  </div>
+</section>
+
+<section id="electrical">
+  <div class="container">
+    <div class="section-title">Electrical</div>
+    <ul class="spec-list">
+      <li>6-cylinder 175A alternator with current straightening adapter</li>
+      <li>Marine-grade billet copper battery terminals, all grounds upgraded to high-gauge wire</li>
+      <li>Fully rebuilt wiring harness, professional</li>
+      <li><strong>Innovate Motorsports ECB-1 (P/N 39110):</strong> ethanol %, boost, and wideband AFR in one gauge</li>
+      <li>8ga x2 starter wire and heavy connector</li>
+      <li>AstroStart remote start system with security enable</li>
+      <li>BT head unit with 40W phone charger, renewed speakers, non-reflective dash cover</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title">Interior</div>
+    <ul class="spec-list">
+      <li>Original WRX bucket seats, driver bolsters professionally repaired</li>
+      <li>Driver seat adjusted and lowered for 6'5"+ with helmet clearance; suitable for anyone under 6'5"</li>
+      <li>OEM floor mats and OEM mud floor mats, IAG floor mat bracket (prevents shifting under hard driving)</li>
+      <li>Momo steering wheel, Japanese production</li>
+      <li>Seat headrest hooks (4-pack), driver seat headrest pillow, trunk organizer set</li>
+    </ul>
+  </div>
+</section>
+
+<section id="included">
+  <div class="container">
+    <div class="section-title">Included with Sale (~$5,000 in Extras)</div>
+    <ul class="spec-list">
+      <li>Spare parts for most wear items</li>
+      <li>EJ205 core engine</li>
+      <li>VP fuel bucket</li>
+      <li>Motul 300V 15W-50 oil + Mazda N3R1-14-302 oil filter (post-break-in supply)</li>
+      <li>Tuning laptop (ThinkPad) with full ECU software suite and Tactrix Openport cable</li>
+      <li>Subaru specialty tools: CTA camshaft locking tool, oil pump seal tool, and others</li>
+      <li>Full JIC Japanese bolt set</li>
+      <li>Red Line 75W90 synthetic gear oil</li>
+      <li>Optional rear strut tower brace</li>
+      <li>Sand and mud traversal recovery gear</li>
+      <li>Lucas assembly lube and break-in oil supply</li>
+      <li>All maintenance documentation available</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title">Maintenance Notes</div>
+    <div class="callout">
+      <strong>Daily driving:</strong> Change oil every 3,000 miles and this car will run reliably for 10 more years.
+    </div>
+    <div class="spec-group" style="margin-top:20px;">
+      <h3>Performance Driving</h3>
+      <ul class="spec-list">
+        <li>Maintain turbo, cooling system, and transmission on a track schedule</li>
+        <li>Run E85 for full power</li>
+        <li>Drive with left-foot braking, torque converter launch at 3,600 RPM</li>
+        <li>Stamp throttle in one quick firm motion when shifting under boost</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <strong>Ideal buyer:</strong> Someone who races weekends, offroads, and preferably installs a front frame-mounted bull bar to better protect the lights and FMIC.
+    </div>
+  </div>
+</section>
+
+<section id="parts-value">
+  <div class="container">
+    <div class="section-title">Parts Value Reference</div>
+    <div class="callout">
+      Parts alone significantly exceed the asking price. Professional labor, custom fabrication, and the custom tune add an estimated <strong>$3,000 to $8,000</strong> in value on top.
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Part</th><th>Est. Market Value</th></tr></thead>
+        <tbody>
+          <tr><td>EJ257 semi-closed deck build (block, nitrided crank, S20V heads, gaskets, hardware)</td><td>$2,500 - $4,000</td></tr>
+          <tr><td>Seibon CWII carbon fiber hood + AeroCatch latches</td><td>~$1,500 - $1,630</td></tr>
+          <tr><td>Custom large-core FMIC (professional build)</td><td>~$1,500 - $2,000</td></tr>
+          <tr><td>JDM 2004 STI front bumper</td><td>~$500 - $1,000</td></tr>
+          <tr><td>Tomei Expreme Equal Length Headers</td><td>~$801 - $890</td></tr>
+          <tr><td>Fluidampr EJ harmonic balancer (531101)</td><td>~$483</td></tr>
+          <tr><td>IAG Kevlar timing belt kit</td><td>$599.99</td></tr>
+          <tr><td>Injector Dynamics ID1050x (set of 4)</td><td>~$600 - $700</td></tr>
+          <tr><td>Killer B oil pickup + baffle combo</td><td>~$219</td></tr>
+          <tr><td>Invidia 3" bellmouth catless downpipe</td><td>~$700</td></tr>
+          <tr><td>Method MR502 VT-Spec 2 forged wheels (set of 4) + spare</td><td>~$1,285 - $1,315</td></tr>
+          <tr><td>Whiteline front + rear sway bar kit</td><td>~$791</td></tr>
+          <tr><td>GrimmSpeed flex uppipe</td><td>~$270 - $300</td></tr>
+          <tr><td>IAG fuel rails + PTFE lines</td><td>~$370 - $470</td></tr>
+          <tr><td>Aeromotive FPR + filter housing</td><td>~$300 - $365</td></tr>
+          <tr><td>40T Performance E85 bypass module</td><td>$109.98</td></tr>
+          <tr><td>Innovate ECB-1 gauge</td><td>~$361</td></tr>
+          <tr><td>Monstaliner roll-on coating (materials)</td><td>$154 - $250</td></tr>
+          <tr><td>KYB AGX shocks + JDM STI springs</td><td>~$400 - $600</td></tr>
+          <tr><td>Chase Bays brake lines + ABS delete + bias valve</td><td>~$570 - $720</td></tr>
+          <tr><td>DEI turbo blanket</td><td>~$60 - $100</td></tr>
+          <tr><td>Mishimoto MMAB-WRX-01 airbox</td><td>~$157</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title">Location and Terms</div>
+    <div class="terms-grid">
+      <div class="terms-card"><div class="icon">&#128205;</div><div class="label">Location</div><div class="val">Gainesville, Florida</div></div>
+      <div class="terms-card"><div class="icon">&#128181;</div><div class="label">Payment</div><div class="val">Cash or verified funds only</div></div>
+      <div class="terms-card"><div class="icon">&#128196;</div><div class="label">Title</div><div class="val">Clean, in hand, same-day transfer</div></div>
+      <div class="terms-card"><div class="icon">&#128663;</div><div class="label">Test Drives</div><div class="val">Valid license + proof of insurance required</div></div>
+      <div class="terms-card"><div class="icon">&#9992;&#65039;</div><div class="label">Out of State</div><div class="val">Transport discussion for serious buyers</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <h2>Interested? Get in Touch.</h2>
+    <p>Serious inquiries only. No test drives without valid license and proof of insurance.</p>
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone (optional)" />
+      <textarea name="message" placeholder="Tell me about yourself and how you plan to use the car." required></textarea>
+      <button type="submit">Send Message</button>
+      <p class="form-note">
+        Replace <code>YOUR_FORM_ID</code> with your free
+        <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a> endpoint ID.
+        Sign up free, create a form, copy the ID. No backend required.
+      </p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>2002 Subaru WRX &bull; Gainesville, Florida &bull; $15,000 OBO</p>
+  <p style="margin-top:8px;">All modifications documented. Tuning files, ECU software, Tactrix Openport cable, and specialty tools transfer with the car.</p>
+</footer>
+
+</body>
+</html>
