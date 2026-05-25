@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2002 WRX Parts List | vasilyslevin/wrx-for-sale</title>
+  <meta name="description" content="Complete parts list for the 2002 Subaru WRX build. Category, part name, part number, and estimated market value." />
+  <style>
+    :root {
+      --bg: #1a1a1f;
+      --surface: #222228;
+      --border: #35353f;
+      --accent: #d4006e;
+      --accent2: #f0007f;
+      --text: #ececec;
+      --muted: #888899;
+      --gold: #f5a623;
+      --radius: 8px;
+      --max: 1100px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    a { color: var(--accent2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .hero {
+      background: linear-gradient(135deg, #2a0035 0%, #1a1a1f 60%);
+      border-bottom: 3px solid var(--accent);
+      padding: 40px 20px 32px;
+      text-align: center;
+    }
+    .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 8px; }
+    .hero h1 span { color: var(--accent2); }
+    .hero p { color: var(--muted); font-size: 0.95rem; margin-bottom: 16px; }
+    .hero a.back-btn {
+      display: inline-block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--accent2);
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 8px 20px;
+      border-radius: var(--radius);
+      transition: border-color 0.2s;
+    }
+    .hero a.back-btn:hover { border-color: var(--accent2); text-decoration: none; }
+    .controls {
+      max-width: var(--max);
+      margin: 24px auto 0;
+      padding: 0 20px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .controls label { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-right: 4px; }
+    .controls select, .controls input {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text);
+      font-size: 0.88rem;
+      padding: 7px 12px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .controls select:focus, .controls input:focus { border-color: var(--accent2); }
+    .controls input { width: 220px; }
+    .summary {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px 16px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 20px;
+      min-width: 160px;
+    }
+    .stat-card .s-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+    .stat-card .s-val { font-size: 1.4rem; font-weight: 800; color: var(--gold); }
+    .table-wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px 60px;
+      overflow-x: auto;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    thead th {
+      background: var(--accent);
+      color: #fff;
+      text-align: left;
+      padding: 10px 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      position: sticky;
+      top: 0;
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+    }
+    thead th:hover { background: var(--accent2); }
+    thead th .sort-arrow { margin-left: 6px; opacity: 0.5; font-size: 0.7rem; }
+    thead th.sorted .sort-arrow { opacity: 1; }
+    tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+    tbody tr:hover { background: #2a2a32; }
+    tbody tr.hidden { display: none; }
+    tbody td { padding: 9px 14px; vertical-align: top; }
+    tbody td.val-col { color: var(--gold); font-weight: 600; white-space: nowrap; }
+    tbody td.cat-col {
+      font-weight: 600;
+      color: var(--accent2);
+      white-space: nowrap;
+    }
+    tbody td.subcat-col { color: var(--muted); white-space: nowrap; }
+    tbody td.pn-col { font-family: monospace; font-size: 0.78rem; color: var(--muted); }
+    .no-results {
+      text-align: center;
+      padding: 40px;
+      color: var(--muted);
+      display: none;
+    }
+    footer {
+      text-align: center;
+      padding: 24px 20px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      border-top: 1px solid var(--border);
+    }
+    @media (max-width: 600px) {
+      .controls input { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>2002 Subaru <span>WRX</span> — Parts List</h1>
+  <p>Complete build parts reference with part numbers and estimated market values.</p>
+  <a href="index.html" class="back-btn">Back to Listing</a>
+</div>
+
+<div class="controls">
+  <div>
+    <label for="cat-filter">Category</label>
+    <select id="cat-filter">
+      <option value="">All</option>
+    </select>
+  </div>
+  <div>
+    <label for="search-box">Search</label>
+    <input id="search-box" type="text" placeholder="Part name, number, notes..." />
+  </div>
+  <div style="margin-left:auto;">
+    <button onclick="exportCSV()" style="background:var(--accent);color:#fff;font-weight:700;font-size:0.85rem;padding:8px 18px;border:none;border-radius:var(--radius);cursor:pointer;">Export CSV</button>
+  </div>
+</div>
+
+<div class="summary">
+  <div class="stat-card"><div class="s-label">Showing Parts</div><div class="s-val" id="count-display">0</div></div>
+  <div class="stat-card"><div class="s-label">Est. Min Value</div><div class="s-val" id="min-display">$0</div></div>
+  <div class="stat-card"><div class="s-label">Est. Max Value</div><div class="s-val" id="max-display">$0</div></div>
+</div>
+
+<div class="table-wrap">
+  <table id="parts-table">
+    <thead>
+      <tr>
+        <th data-col="0">Category <span class="sort-arrow">&#9650;</span></th>
+        <th data-col="1">Subcategory <span class="sort-arrow">&#9650;</span></th>
+        <th data-col="2">Part Name <span class="sort-arrow">&#9650;</span></th>
+        <th data-col="3">Part Number / Notes <span class="sort-arrow">&#9650;</span></th>
+        <th data-col="4">Est. Market Value <span class="sort-arrow">&#9650;</span></th>
+      </tr>
+    </thead>
+    <tbody id="parts-body"></tbody>
+  </table>
+  <div class="no-results" id="no-results">No parts match your filter.</div>
+</div>
+
+<footer>
+  <p>2002 Subaru WRX &bull; Gainesville, Florida &bull; $15,000 OBO &bull; <a href="index.html">View Full Listing</a></p>
+</footer>
+
+<script>
+const PARTS = [
+  ["Engine","Block","EJ257 Semi-Closed Deck Block","Short block base","incl. in build cost"],
+  ["Engine","Block","Nitrated STI Crankshaft","OEM STI spec","incl. in build cost"],
+  ["Engine","Block","Killer B Oil Baffle","Killer B Motorsport","$89-$119"],
+  ["Engine","Block","Killer B Oil Pickup","Killer B Motorsport","$89-$119"],
+  ["Engine","Block","Large-Bore Oil Pump","OEM+","$80-$150"],
+  ["Engine","Block","ARP Head Studs","ARP 260-4701 or equiv.","$130-$180"],
+  ["Engine","Block","OEM Fire Ring Head Gaskets","OEM","$80-$120 set"],
+  ["Engine","Block","All New OEM and OEM+ Gaskets","Full set","$100-$200"],
+  ["Engine","Block","Fluidampr EJ Steel Harmonic Balancer","P/N 531101","$483"],
+  ["Engine","Block","Oil Warmer Deleted","Removed for reliability","--"],
+  ["Engine","Heads","S20V Large-Port Heads","OEM JDM upgrade","$400-$800 pair"],
+  ["Engine","Heads","Billet Half-Moons","Billet aluminum","$40-$80"],
+  ["Engine","Heads","IAG 8mm Phenolic TGV Spacers","IAG Performance B0B6T13G2F","$60-$80"],
+  ["Engine","Heads","IAG Billet TGV Housings","IAG Performance, ported","$200-$280"],
+  ["Engine","Heads","Ported Intake Manifold with Phenolic Gaskets","Professional port work","$100-$300"],
+  ["Engine","Heads","Genuine Subaru Intake Manifold Gaskets (pair)","14035AA421 pair","$25-$40"],
+  ["Engine","Heads","Genuine Subaru Camshaft Seals (set of 4)","EJ205/EJ257 OEM B01ED4K5JY","$20-$35"],
+  ["Engine","Heads","Genuine Subaru Crankshaft Pulley Bolt","12369AA011","$10-$20"],
+  ["Engine","Timing","IAG Kevlar Red Racing Timing Belt Kit","IAG B0B8TYPFP6, incl. belt/idlers/tensioner","$599.99"],
+  ["Engine","Timing","TIC Cam Sprocket Bolts","TIC Racing","$40-$60"],
+  ["Engine","Rotating / Seals","All New Front and Rear Crankshaft Seals","OEM","$30-$60"],
+  ["Engine","Rotating / Seals","New Water Pump","OEM spec","$40-$80"],
+  ["Engine","Rotating / Seals","Billet Water Pump Tube","Billet aluminum","$60-$100"],
+  ["Engine","Rotating / Seals","Genuine Subaru Thermostat and Gasket Kit","21200AA072 / 21236AA010","$25-$45"],
+  ["Engine","Rotating / Seals","Exhaust Manifold Gasket Kit","CNS B0724ZBNL3 / QAGGUM B0DN13B33N","$20-$40"],
+  ["Engine","Rotating / Seals","Air Control Valve Gasket","Genuine Subaru 22659AA120","$10-$20"],
+  ["Engine","Ignition","Race Ignition Coils with Wired-In Connectors","Aftermarket race spec","$120-$200"],
+  ["Engine","Ignition","Denso Platinum TT Spark Plugs (one step colder)","PK16TT #4503, set of 4","$30-$50"],
+  ["Engine","Ignition","Cylinder 4 Modification","Anti-knock mod","--"],
+  ["Engine","Ignition","Throttle Body Bypass","Installed","--"],
+  ["Engine","Lubrication","Killer B Relocated Oil Filler Neck","Killer B Motorsport","$60-$100"],
+  ["Engine","Lubrication","Votex M20x1.5 Stainless Quick-Drain Plug with Hose","SMQDP008","$30-$50"],
+  ["Engine","Lubrication","EWK Threaded Subaru Oil Funnel","B08VDXH371","$15-$25"],
+  ["Engine","Lubrication","All Hoses Silicone or PTFE","Throughout engine bay","$100-$200"],
+  ["Engine","Lubrication","Breeze Liner-Protected Hose Clamps","All clamps","$40-$80"],
+  ["Engine","Lubrication","Motul 300V 15W-50 Competition Oil (supply incl.)","B0B2B8L1B9","$90-$120 (5L)"],
+  ["Engine","Lubrication","Mazda N3R1-14-302 Oil Filter (supply incl.)","B00HG7G3VA","$8-$12 each"],
+  ["Engine","Lubrication","Lucas SAE 30 Break-In Oil (supply incl.)","B005JVEEBG","$15-$20"],
+  ["Engine","Lubrication","Lucas Assembly Lube","B07DM8DN7N","$10-$15"],
+  ["Engine","Cooling","Double-Row Aluminum Radiator","High-capacity","$150-$300"],
+  ["Engine","Cooling","High-Pressure Radiator Caps","OEM+","$15-$30"],
+  ["Engine","Cooling","Billet Overflow Tank","Billet aluminum","$60-$100"],
+  ["Engine","Cooling","Zerex Asian Vehicle Blue 50/50 Coolant","B071RTG2QM, silicate-free","$20-$30/gal"],
+  ["Engine","Cooling","Subaru OEM Coolant System Conditioner","SOA635071","$10-$20"],
+  ["Engine","Cooling","Water Wetter","Red Line","$10-$15"],
+  ["Engine","Cooling","Brand New A/C System (blows cold)","Full system","$200-$400"],
+  ["Engine","Cooling","A/C Pulley Belt Adjuster Kit","DUZFOREI 73131FC000 B0D1G5CQF7","$20-$35"],
+  ["Fuel System","Injectors","Injector Dynamics ID1050x 1065cc/min (set of 4)","Plug-and-play Subaru fitment B07C7JGXGT","$600-$700"],
+  ["Fuel System","Filter","Aeromotive 10-Micron Microglass Fuel Filter","B012HQRVP6, full housing","$80-$120"],
+  ["Fuel System","Regulator","Aeromotive A1000 EFI Fuel Pressure Regulator","Return-style","$212-$245"],
+  ["Fuel System","Rails","IAG V3 Top-Feed Billet Fuel Rails (red)","IAG Performance","$219.99"],
+  ["Fuel System","Lines","IAG PTFE Stainless Braided Fuel Lines","IAG Performance","$150-$200"],
+  ["Fuel System","Pump","Direct-Wired 400 LPH High-Pressure Fuel Pump","Corrosion-sealed tank","$80-$150"],
+  ["Fuel System","Tank","Genuine Subaru Fuel Tank O-Ring","42060AA040","$10-$20"],
+  ["Fuel System","Flex Fuel","GM 3-Wire E85 Flex Fuel Sensor","Installed and functioning","$30-$60"],
+  ["Fuel System","Flex Fuel","40T Performance Billet 6061 E85 Bypass Module","6AN and 8AN fittings","$109.98"],
+  ["Fuel System","Sensor","Denso 234-5137 Wideband AFR Sensor","B001F7GKY2","$60-$100"],
+  ["Fuel System","Gauge","Innovate Motorsports ECB-1 Gauge","P/N 39110, live ethanol/boost/AFR","$361"],
+  ["Induction","Airbox","Mishimoto MMAB-WRX-01 Enclosed Airbox","Caged, sealed to outside air","$156.95"],
+  ["Induction","Filter","K&N High-Flow Air Filter","With FILTERWEARS sand/water sock","$50-$70"],
+  ["Induction","Turbo Inlet","AMR Performance Cast Forged Turbo Inlet Pipe","Prevents cavitation","$80-$120"],
+  ["Induction","MAP","IAG MAP Sensor Adapter (red)","B0B8QHVGVN","$40-$60"],
+  ["Induction","IAT","IAT Sensor with Heat-Protected Billet Mount","Into TB silicone coupler","$30-$60"],
+  ["Induction","Cabin Filter","ECOGARD XC25855 Premium Cabin Air Filter","B00I8IQY42","$15-$25"],
+  ["Turbo / Boost / Exhaust","Turbo","OEM TD04 Turbocharger (pristine)","Correctly tuned to ID1050x limits","$300-$600"],
+  ["Turbo / Boost / Exhaust","FMIC","Custom Professional Large-Core Bar-and-Plate FMIC","Heat-protected pipes, layered silicone couplers","$1,500-$2,000"],
+  ["Turbo / Boost / Exhaust","FMIC","Billet Wiper Spray Reservoir for FMIC Spray","Aluminum billet B07HFZS8PJ","$60-$100"],
+  ["Turbo / Boost / Exhaust","BOV","Stock BOV Modified for Longevity","Modified OEM","--"],
+  ["Turbo / Boost / Exhaust","Uppipe","GrimmSpeed EJ 2-Bolt Flex Uppipe","321 SS flex joint, 14ga 304 SS, lifetime warranty","$270-$300"],
+  ["Turbo / Boost / Exhaust","Headers","Tomei Expreme Equal Length Exhaust Manifold","4-2-1, SUS304 stainless, lost-wax cast collector","$801-$890"],
+  ["Turbo / Boost / Exhaust","Downpipe","Invidia 3\" Bellmouth Catless Divorced Downpipe","Extra O2 bung, 304 stainless","~$700"],
+  ["Turbo / Boost / Exhaust","Exhaust","Straight Pipe to Stock Muffler","Flush connectors for easy access","--"],
+  ["Turbo / Boost / Exhaust","Boost Control","GrimmSpeed 3-Port Electronic Boost Control Solenoid","EBCS","$136-$140"],
+  ["Turbo / Boost / Exhaust","Heat Mgmt","DEI Turbo Blanket","","$60-$100"],
+  ["Turbo / Boost / Exhaust","Heat Mgmt","Downpipe Wrap","DEI/Thermo Tec","$30-$60"],
+  ["Turbo / Boost / Exhaust","Feed Lines","IAG Braided SS Turbo-Feed Lines","IAG Performance","$60-$100"],
+  ["Turbo / Boost / Exhaust","Gaskets","All Steel Exhaust Gaskets","OEM spec throughout","$20-$40"],
+  ["Turbo / Boost / Exhaust","Hardware","Turbo Bolt and Nut Kit","K-Motor B09G23NNXX","$15-$30"],
+  ["Transmission","Valve Body","RatioTek HD Valve Body","4EAT P2V1, fast shifts under boost","$400-$600"],
+  ["Transmission","Cooler","Hayden Front Transmission Cooler","With dedicated filter","$60-$100"],
+  ["Transmission","Fluids","Full-Synthetic ATF with Redline Additive","Correct spec","$30-$60"],
+  ["Transmission","Differential","Redline 75W90 Synthetic Gear Fluid (front and rear diffs)","With Redline additive B000CPCBF0","$20-$40 per qt"],
+  ["Transmission","Mount","Custom Poly Billet Transmission Mount","Made by Kein","$80-$150"],
+  ["Transmission","LSD","Rear LSD","OEM STI spec","incl."],
+  ["Transmission","Driveshaft","Serviceable Lightweight Driveshaft","Dorman 936-939 OE Fix B00JW1WYQG","$80-$150"],
+  ["Transmission","Subframe","Kartboy Rear Subframe Lockdown Bolts","B007O0JFQY","$40-$60"],
+  ["Power Steering","Cooler","Hayden Power Steering Cooler","Front-mounted and plumbed","$30-$60"],
+  ["Power Steering","Lines","IAG High-Pressure Braided PS Lines","OEM routing B06XR62Y95","$100-$150"],
+  ["Power Steering","Adjuster","Subaru Genuine PS Adjuster Kit","34435AA030 / 34436AA001 B084SQ8YQR","$20-$40"],
+  ["Suspension","Shocks / Springs","KYB AGX Adjustable Shocks","With JDM 2004 STI springs","$400-$600"],
+  ["Suspension","Strut Mounts","Genuine Subaru Group N Front Strut Mounts (2 pairs)","B0310FE000 B01EKBAFY0","$80-$120 pair"],
+  ["Suspension","Engine Mounts","Group N Engine and Transmission Mount Set","B00ANOV24G","$100-$150"],
+  ["Suspension","Pitch Stop","Black Pitch Stop Mount EM001","B0752FV7HS","$40-$70"],
+  ["Suspension","Sway Bars","Whiteline Big Sway Bar Front and Rear Kit","02-03 WRX","$791"],
+  ["Suspension","End Links","Kartboy Sway Bar End Links (front and rear)","Kartboy","$80-$120"],
+  ["Suspension","Control Arms","STI Front Upper and Lower Control Arms","OEM STI","$200-$400"],
+  ["Suspension","Braces","JDM Top Brace, Front Brace, Under Brace","OEM JDM","$150-$300"],
+  ["Suspension","Knuckles","STI Steering Knuckles","OEM STI","$100-$200 pair"],
+  ["Suspension","Strut Bar","Front Strut Bar (02-07 WRX/STI)","B00E9IS1AK","$40-$80"],
+  ["Suspension","Lower Brace","4-Point Lower Arm Cross Tie Bar","B00CEORS00","$40-$80"],
+  ["Suspension","Rear Arms","Whiteline Adjustable Rear Arms","","$100-$200"],
+  ["Suspension","Bushings","Full Polyurethane Bushing Set","Nolathane and Whiteline throughout","$200-$400"],
+  ["Suspension","Alignment","Professional Racing Alignment with Correct Offsets","","$100-$200"],
+  ["Suspension","Axles","OEM CV Axles with Serviceable Boots and Joints","OEM","$100-$200"],
+  ["Brakes","Calipers","A-Premium 4-Pot Front Caliper Assembly","B082MK9LNH, cooling paths preserved","$80-$150"],
+  ["Brakes","Rotors","ACDelco Silver 18A1340A Front Rotors","","$40-$80"],
+  ["Brakes","Rotors","DuraGo BR900374 Rear Vented Rotors","","$40-$80"],
+  ["Brakes","Pads","MAGMA Ceramic Front and Rear Pads","","$40-$80"],
+  ["Brakes","Lines","Chase Bays Stainless Braided Brake Line Relocation Kit","02-07 WRX/STI w/OEMC","$200-$280"],
+  ["Brakes","Cylinder Brace","GrimmSpeed Brake Cylinder Brace","","$60-$100"],
+  ["Brakes","Bias","Chase Bays R/F Brake Bias Controller","2-way valve","$150-$200"],
+  ["Brakes","ABS","Chase Bays ABS Delete Kit","ABS removed for controlled braking","$120-$180"],
+  ["Brakes","Fluid","ATE TYP 200 DOT 4 Racing Brake Fluid","","$20-$30"],
+  ["Wheels / Tires","Wheels","Method MR502 VT-Spec 2 15x7 5x100 +15 (set of 4)","Forged A356, stainless lug inserts, 2100 lb/wheel","$1,100-$1,200"],
+  ["Wheels / Tires","Spare Wheel","Extra Method MR502 Rally 15\" Spare","5th forged spare","$185-$215"],
+  ["Wheels / Tires","Tires","Michelin CrossClimate Directional Commercial (set of 4)","All-surface, balance beads, resistant valves","$400-$600"],
+  ["Wheels / Tires","Spare Tire","Michelin X-CLIMATE Directional 94T","Sealed trunk-adapted mount","$100-$140"],
+  ["Wheels / Tires","Lug Nuts","Motegi Lug Nuts","","$20-$40"],
+  ["Offroad / Recovery","Skid Plates","1/4 inch T6061 Aluminum Skid Plates (front frame, trans, rear diff)","","$300-$500"],
+  ["Offroad / Recovery","Undercoating","3M Rubber Undercoating (full underside)","","$40-$80"],
+  ["Offroad / Recovery","Liners","OEM New Wheel Well Liners, Fender Inserts, Full Underbody Liner Set","","$100-$200"],
+  ["Offroad / Recovery","Hitch","CURT 113183 Class 1 Hitch 1-1/4\" 2000 lb","","$80-$120"],
+  ["Offroad / Recovery","Hitch","Hitch Pulling Attachment","","$20-$40"],
+  ["Offroad / Recovery","Winch Mount","Extreme Max Universal 1.25\" Hitch Winch Mount","5600.3087","$40-$70"],
+  ["Offroad / Recovery","Winch","3000 lb 12V Electric Winch with Synthetic Rope and Wireless Remote","","$100-$200"],
+  ["Offroad / Recovery","Recovery Gear","Sand Bars, Mud Traversal Plates, Tire Deflators","","$40-$80"],
+  ["Offroad / Recovery","Bumper Protection","Front Bumper Protection Netting","","$20-$40"],
+  ["Offroad / Recovery","Anti-Bump","Anti-Bump Strips Front and Rear","","$15-$30"],
+  ["Exterior","Bumper","JDM 2004 STI Front Bumper","","$500-$1,000"],
+  ["Exterior","Grille","JDM Black Front Grille","","$50-$100"],
+  ["Exterior","Hood","Seibon CWII Carbon Fiber Hood","With AeroCatch flush-mount locking latches","$1,500-$1,630"],
+  ["Exterior","Headlights","Depo 320-1115P-US2 Retrofitted Headlights with HID Projectors","Black trim","$150-$250"],
+  ["Exterior","Coating","Monstaliner Roll-On Bedliner Coating","Applied to exterior body surfaces","$154-$250"],
+  ["Exterior","Fog Lights","Hella Fog Lights with Yellow Spectrum Bulbs","","$60-$100"],
+  ["Exterior","Wipers","Silicone PIAA Wipers","","$30-$50"],
+  ["Exterior","Windshield","Nextzett Kristall Klar Windshield Fluid (coated windshield)","","$10-$20"],
+  ["Electrical","Alternator","6-Cylinder 175A Alternator with Current Straightening Adapter","","$150-$300"],
+  ["Electrical","Battery","Marine-Grade Billet Copper Battery Terminals","","$20-$40"],
+  ["Electrical","Grounding","All Grounds Upgraded to High-Gauge Wire","","$30-$60"],
+  ["Electrical","Harness","Fully Rebuilt Wiring Harness (professional)","","$500-$1,000"],
+  ["Electrical","Gauge","Innovate Motorsports ECB-1 Ethanol/Boost/AFR Gauge","P/N 39110","$361"],
+  ["Electrical","Starter","8ga x2 Starter Wire and Heavy Connector","","$20-$40"],
+  ["Electrical","Remote Start","AstroStart Remote Start System with Security Enable","","$100-$200"],
+  ["Electrical","Head Unit","BT Head Unit with 40W Phone Charger, Renewed Speakers","","$60-$120"],
+  ["Interior","Seats","Original WRX Bucket Seats (driver bolsters repaired)","","$200-$400"],
+  ["Interior","Floor Mats","OEM Floor Mats and OEM Mud Floor Mats","","$40-$80"],
+  ["Interior","Mat Bracket","IAG Floor Mat Bracket","Prevents shifting under hard driving","$30-$50"],
+  ["Interior","Steering Wheel","Momo Steering Wheel (Japanese production)","","$100-$200"],
+  ["Interior","Accessories","Seat Headrest Hooks (4-pack)","","$10-$20"],
+  ["Interior","Accessories","Driver Seat Headrest Pillow","","$15-$30"],
+  ["Interior","Accessories","Trunk Organizer Set","","$20-$40"],
+  ["Interior","Dash","Non-Reflective Dash Cover","","$30-$60"],
+  ["Included Extras","Engine","EJ205 Core Engine","Included with sale","$300-$600"],
+  ["Included Extras","Fluids","VP Fuel Bucket","","$20-$40"],
+  ["Included Extras","Tools","Tuning Laptop (ThinkPad) with ECU Software Suite","With Tactrix Openport cable","$200-$400"],
+  ["Included Extras","Tools","Subaru Specialty Tools (CTA Camshaft Lock, Oil Pump Seal, others)","","$80-$150"],
+  ["Included Extras","Hardware","Full JIC Japanese Bolt Set","","$50-$100"],
+  ["Included Extras","Fluids","Red Line 75W90 Synthetic Gear Oil","","$20-$40"],
+  ["Included Extras","Suspension","Optional Rear Strut Tower Brace","","$40-$80"],
+  ["Included Extras","Recovery","Sand and Mud Traversal Recovery Gear","Included","$40-$80"]
+];
+
+function parseVal(str) {
+  if (!str || str === '--' || str === 'incl.' || str.includes('incl.')) return [0, 0];
+  const nums = str.replace(/[^0-9.,-]/g, '').split('-').map(s => parseFloat(s.replace(/,/g, ''))).filter(n => !isNaN(n));
+  if (nums.length === 0) return [0, 0];
+  if (nums.length === 1) return [nums[0], nums[0]];
+  return [nums[0], nums[nums.length - 1]];
+}
+
+let sortCol = -1;
+let sortAsc = true;
+let currentData = [...PARTS];
+
+function buildCategoryFilter() {
+  const cats = [...new Set(PARTS.map(r => r[0]))].sort();
+  const sel = document.getElementById('cat-filter');
+  cats.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c;
+    opt.textContent = c;
+    sel.appendChild(opt);
+  });
+}
+
+function render() {
+  const catFilter = document.getElementById('cat-filter').value.toLowerCase();
+  const searchVal = document.getElementById('search-box').value.toLowerCase();
+  const tbody = document.getElementById('parts-body');
+  tbody.innerHTML = '';
+
+  let filtered = currentData.filter(row => {
+    const matchCat = !catFilter || row[0].toLowerCase() === catFilter;
+    const matchSearch = !searchVal || row.some(cell => cell.toLowerCase().includes(searchVal));
+    return matchCat && matchSearch;
+  });
+
+  let totalMin = 0, totalMax = 0;
+  filtered.forEach(row => {
+    const [vmin, vmax] = parseVal(row[4]);
+    totalMin += vmin;
+    totalMax += vmax;
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td class="cat-col">${esc(row[0])}</td>
+      <td class="subcat-col">${esc(row[1])}</td>
+      <td>${esc(row[2])}</td>
+      <td class="pn-col">${esc(row[3])}</td>
+      <td class="val-col">${esc(row[4])}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  document.getElementById('count-display').textContent = filtered.length;
+  document.getElementById('min-display').textContent = '$' + Math.round(totalMin).toLocaleString();
+  document.getElementById('max-display').textContent = '$' + Math.round(totalMax).toLocaleString();
+  document.getElementById('no-results').style.display = filtered.length === 0 ? 'block' : 'none';
+}
+
+function esc(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function sortTable(col) {
+  if (sortCol === col) { sortAsc = !sortAsc; } else { sortCol = col; sortAsc = true; }
+  document.querySelectorAll('thead th').forEach((th, i) => {
+    th.classList.toggle('sorted', i === col);
+    const arrow = th.querySelector('.sort-arrow');
+    if (i === col) arrow.textContent = sortAsc ? '\u25B2' : '\u25BC';
+    else arrow.textContent = '\u25B2';
+  });
+  currentData.sort((a, b) => {
+    let va = a[col], vb = b[col];
+    if (col === 4) { va = parseVal(va)[0]; vb = parseVal(vb)[0]; return sortAsc ? va - vb : vb - va; }
+    return sortAsc ? va.localeCompare(vb) : vb.localeCompare(va);
+  });
+  render();
+}
+
+function exportCSV() {
+  const catFilter = document.getElementById('cat-filter').value.toLowerCase();
+  const searchVal = document.getElementById('search-box').value.toLowerCase();
+  const filtered = currentData.filter(row => {
+    const matchCat = !catFilter || row[0].toLowerCase() === catFilter;
+    const matchSearch = !searchVal || row.some(cell => cell.toLowerCase().includes(searchVal));
+    return matchCat && matchSearch;
+  });
+  const header = 'Category,Subcategory,Part Name,Part Number / Notes,Est. Market Value (USD)';
+  const rows = filtered.map(r => r.map(c => '"' + c.replace(/"/g, '""') + '"').join(','));
+  const csv = [header, ...rows].join('\n');
+  const blob = new Blob([csv], {type: 'text/csv'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'wrx-parts-list.csv'; a.click();
+  URL.revokeObjectURL(url);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  buildCategoryFilter();
+  currentData = [...PARTS];
+  render();
+  document.getElementById('cat-filter').addEventListener('change', render);
+  document.getElementById('search-box').addEventListener('input', render);
+  document.querySelectorAll('thead th').forEach((th, i) => {
+    th.addEventListener('click', () => sortTable(i));
+  });
+});
+</script>
+</body>
+</html>
