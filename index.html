@@ -112,7 +112,6 @@
       flex-direction: column;
       gap: 6px;
     }
-    .gallery-grid .placeholder { font-size: 2rem; }
     .tagline-section { padding: 50px 20px; text-align: center; border-bottom: 1px solid var(--border); }
     .tagline-section blockquote {
       max-width: 680px;
@@ -124,6 +123,7 @@
     }
     .tagline-section blockquote strong { color: var(--gold); font-style: normal; }
     section { padding: 50px 20px; border-bottom: 1px solid var(--border); }
+    section:last-of-type { border-bottom: none; }
     .section-title {
       font-size: 1.4rem;
       font-weight: 800;
@@ -160,7 +160,7 @@
     }
     ul.spec-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
     ul.spec-list li { padding-left: 18px; position: relative; font-size: 0.95rem; }
-    ul.spec-list li::before { content: '&#9656;'; color: var(--accent2); position: absolute; left: 0; top: 0; }
+    ul.spec-list li::before { content: '\25B8'; color: var(--accent2); position: absolute; left: 0; top: 0; }
     ul.spec-list li strong { color: #fff; }
     .callout {
       background: var(--surface);
@@ -219,7 +219,15 @@
       padding: 18px;
       text-align: center;
     }
-    .terms-card { font-size: 2rem; margin-bottom: 8px; }
+    .terms-card::before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      margin: 0 auto 10px auto;
+    }
     .terms-card .label { font-size: 0.85rem; color: var(--muted); margin-bottom: 4px; }
     .terms-card .val { font-weight: 700; font-size: 0.95rem; }
     .contact-section {
@@ -309,6 +317,7 @@
     <li><a href="#engine">Engine</a></li>
     <li><a href="#fuel">Fuel</a></li>
     <li><a href="#turbo">Turbo</a></li>
+    <li><a href="#cooling">Cooling</a></li>
     <li><a href="#suspension">Suspension</a></li>
     <li><a href="#brakes">Brakes</a></li>
     <li><a href="#wheels">Wheels</a></li>
@@ -351,8 +360,10 @@
       Drive through mud, sand, and rocks. <strong>Win the race on the weekend.</strong>
       <br><br>
       Purpose-built, professionally assembled, street/rally/track machine built to last 10 more years
-      of hard use with basic maintenance. Every part researched, triple-verified, and installed by a
-      builder with hands-on experience building Mitsubishi Evos, Nissan R32/R33 GT-Rs, and Audi R8.
+      of hard use with basic maintenance. Every part was researched, triple-verified, and installed or
+      overseen by a builder and tuner with direct hands-on experience building JDM legends: first and
+      second generation Mitsubishi Evos, Nissan R32 and R33 GT-Rs, and Audi R8. He knows every bolt
+      in this car.
     </blockquote>
   </div>
 </div>
@@ -475,10 +486,26 @@
       </ul>
     </div>
     <div class="spec-group">
+      <h3>Lubrication</h3>
+      <ul class="spec-list">
+        <li>Killer B relocated oil filler neck</li>
+        <li>Votex M20x1.5 stainless quick-drain plug with hose, EWK threaded oil funnel</li>
+        <li>All hoses silicone or PTFE with Breeze liner-protected clamps</li>
+      </ul>
+    </div>
+    <div class="spec-group">
       <h3>Timing</h3>
       <ul class="spec-list">
         <li>IAG Kevlar racing timing belt kit (IAG Red Racing Belt, all idlers and tensioner)</li>
         <li>TIC cam sprocket bolts. All rotating assemblies new.</li>
+      </ul>
+    </div>
+    <div class="spec-group">
+      <h3>Ignition</h3>
+      <ul class="spec-list">
+        <li>Race ignition coils with wired-in connectors</li>
+        <li>One step colder Denso platinum plugs</li>
+        <li>Cylinder 4 modification, throttle body bypass mod</li>
       </ul>
     </div>
     <div class="spec-group">
@@ -495,6 +522,7 @@
       <h3>Tune</h3>
       <ul class="spec-list">
         <li>Custom map by a specialist mechanical engineer with two additional Subaru experts</li>
+        <li>Correctly tuned to max out ID1050x injector limits with a precise map</li>
         <li>~<strong>28 MPG highway</strong>, fuel savings at idle</li>
         <li><strong>Flex fuel capable:</strong> more boost on E85 via fuel enrichment, not timing retard</li>
         <li>Conservative on 93 octane for pump-gas reliability</li>
@@ -557,6 +585,21 @@
       <li>Straight pipe from downpipe to stock muffler, flush connectors for easy access</li>
       <li><strong>Boost control:</strong> GrimmSpeed 3-port electronic boost control solenoid</li>
       <li><strong>Heat management:</strong> DEI turbo blanket, downpipe wrap, IAG braided SS turbo-feed lines</li>
+      <li>Billet wiper spray reservoir with FMIC spray compartment (sprayer not included)</li>
+      <li>Next step for power: a small diesel injector unit to maintain proper power band with larger injector upgrade</li>
+      <li><strong>EVAP:</strong> N/A</li>
+    </ul>
+  </div>
+</section>
+
+<section id="cooling">
+  <div class="container">
+    <div class="section-title">Cooling and Fluid Management</div>
+    <ul class="spec-list">
+      <li>Hayden transmission cooler (front-mounted, plumbed, with filter)</li>
+      <li>Hayden power steering cooler (front-mounted, plumbed)</li>
+      <li>IAG braided high-pressure power steering lines</li>
+      <li>Genuine Subaru PS adjuster kit (34435AA030 / 34436AA001)</li>
     </ul>
   </div>
 </section>
@@ -600,7 +643,7 @@
     <div class="spec-group">
       <h3>Wheels and Tires</h3>
       <ul class="spec-list">
-        <li><strong>Wheels:</strong> Method MR502 VT-Spec 2, 15x7 5x100 +15mm, forged A356 aluminum. Developed for the Factory Subaru Rally Team. 2,100 lb per-wheel load rating. Clears 4-pot brakes.</li>
+        <li><strong>Wheels:</strong> Method MR502 VT-Spec 2, 15x7 5x100 +15mm, forged A356 aluminum with stainless lug inserts. Developed for the Factory Subaru Rally Team. 2,100 lb per-wheel load rating. Clears 4-pot brakes.</li>
         <li><strong>5th wheel:</strong> Extra forged Method MR502 Rally 15" spare</li>
         <li><strong>Tires:</strong> Michelin CrossClimate Directional Commercial, all-surface all-season. Balance beads, resistant valves, short stem air valves.</li>
         <li><strong>Spare:</strong> Michelin X-CLIMATE Directional 94T, sealed trunk-adapted mount</li>
@@ -614,6 +657,7 @@
         <li>3M rubber undercoating throughout underside</li>
         <li>OEM new wheel well liners, fender inserts, full underbody liner set</li>
         <li>CURT 113183 Class 1 hitch, 1-1/4" receiver, 2,000 lb tow rated</li>
+        <li>Hitch pulling attachment</li>
         <li>Extreme Max universal 1.25" hitch winch mount</li>
         <li>3,000 lb 12V electric winch with synthetic rope and wireless remote</li>
         <li>Sand bars, mud traversal plates, tire deflators, anti-bump strips front and rear</li>
@@ -660,7 +704,9 @@
       <li>Driver seat adjusted and lowered for 6'5"+ with helmet clearance; suitable for anyone under 6'5"</li>
       <li>OEM floor mats and OEM mud floor mats, IAG floor mat bracket (prevents shifting under hard driving)</li>
       <li>Momo steering wheel, Japanese production</li>
-      <li>Seat headrest hooks (4-pack), driver seat headrest pillow, trunk organizer set</li>
+      <li>Seat headrest hooks (4-pack)</li>
+      <li>Driver seat headrest pillow</li>
+      <li>Trunk organizer set</li>
     </ul>
   </div>
 </section>
@@ -690,6 +736,9 @@
     <div class="section-title">Maintenance Notes</div>
     <div class="callout">
       <strong>Daily driving:</strong> Change oil every 3,000 miles and this car will run reliably for 10 more years.
+    </div>
+    <div class="callout">
+      <strong>Shifting under boost:</strong> Stamp the throttle in one quick firm motion.
     </div>
     <div class="spec-group" style="margin-top:20px;">
       <h3>Performance Driving</h3>
