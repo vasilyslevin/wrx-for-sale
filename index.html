@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2002 Subaru WRX For Sale | Gainesville, FL | $15,000 OBO</title>
   <meta name="description" content="Purpose-built 2002 Subaru WRX sedan. EJ257 full rebuild, ID1050x, custom tune, rally suspension, skid plates, winch, tow hitch. $15,000 OBO in Gainesville FL." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
   <style>
     :root {
     --bg: #1a1a1f;
@@ -92,6 +94,14 @@
       padding: 40px 20px;
       text-align: center;
     }
+    .gallery-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin: 24px 0 12px;
+    }
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -105,19 +115,7 @@
       object-fit: cover;
       border-radius: var(--radius);
       border: 1px solid var(--border);
-    }
-    .gallery-grid .placeholder {
-      background: #1e1e1e;
-      border: 2px dashed var(--border);
-      border-radius: var(--radius);
-      aspect-ratio: 4/3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--muted);
-      font-size: 0.85rem;
-      flex-direction: column;
-      gap: 6px;
+      display: block;
     }
     .tagline-section { padding: 50px 20px; text-align: center; border-bottom: 1px solid var(--border); }
     .tagline-section blockquote {
@@ -379,23 +377,43 @@
   </div>
 </div>
 
-<div class="gallery-section">
+<div class="gallery-section" id="photos">
   <div class="container">
-    <div class="section-title" style="justify-content:center;margin-bottom:24px;">Photos</div>
+    <div class="section-title" style="justify-content:center;margin-bottom:8px;">Photos</div>
+
+    <div class="gallery-label">Exterior</div>
     <div class="gallery-grid">
-      <div class="placeholder">Front / Bumper</div>
-      <div class="placeholder">Engine Bay</div>
-      <div class="placeholder">Carbon Hood + Latches</div>
-      <div class="placeholder">FMIC + Trans Cooler</div>
-      <div class="placeholder">Wheels + Brakes</div>
-      <div class="placeholder">Interior / Gauge</div>
-      <div class="placeholder">Underside / Skid Plates</div>
-      <div class="placeholder">Hitch + Winch</div>
+      <img src="front_quarter.webp" alt="Front quarter view showing JDM STI bumper and carbon hood" loading="lazy" />
+      <img src="front_hood_coolers.webp" alt="Front view showing FMIC, trans cooler, and carbon hood with AeroCatch latches" loading="lazy" />
+      <img src="rear_quarter.webp" alt="Rear quarter view" loading="lazy" />
     </div>
-    <p style="color:var(--muted);font-size:0.85rem;margin-top:18px;">
-      Create an <code>images/</code> folder, upload photos, then replace each placeholder div with<br>
-      <code>&lt;img src="images/filename.jpg" alt="description"&gt;</code>
-    </p>
+
+    <div class="gallery-label">Interior and Gauges</div>
+    <div class="gallery-grid">
+      <img src="interior.webp" alt="Interior showing Momo wheel, seats, and dash" loading="lazy" />
+      <img src="gauge.webp" alt="Innovate ECB-1 gauge showing boost, ethanol percentage, and wideband AFR" loading="lazy" />
+      <img src="odo.webp" alt="Odometer showing chassis miles" loading="lazy" />
+    </div>
+
+    <div class="gallery-label">Engine Bay</div>
+    <div class="gallery-grid">
+      <img src="enginebay.webp" alt="Engine bay showing EJ257 full rebuild with ID1050x injectors and IAG components" loading="lazy" />
+      <img src="spare_engine.webp" alt="EJ205 spare engine included with sale" loading="lazy" />
+    </div>
+
+    <div class="gallery-label">Fuel System</div>
+    <div class="gallery-grid">
+      <img src="fuel_bucket_brace.webp" alt="VP fuel bucket and brace included with sale" loading="lazy" />
+    </div>
+
+    <div class="gallery-label">Suspension, Underside, and Recovery</div>
+    <div class="gallery-grid">
+      <img src="skidplate_suspension.webp" alt="T6061 aluminum skid plates and suspension components" loading="lazy" />
+      <img src="suspension_tankvent.webp" alt="Suspension detail and tank vent" loading="lazy" />
+      <img src="wheel_brake.webp" alt="Method MR502 forged wheel and A-Premium 4-pot brake caliper" loading="lazy" />
+      <img src="full_spare.webp" alt="Full-size Michelin spare on forged Method MR502 Rally wheel" loading="lazy" />
+    </div>
+
   </div>
 </div>
 
