@@ -76,8 +76,15 @@
       padding: 14px 36px;
       border-radius: var(--radius);
       transition: background 0.2s;
+      margin: 0 8px 10px;
     }
     .cta-btn:hover { background: var(--accent2); text-decoration: none; }
+    .cta-btn.secondary {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--accent2);
+    }
+    .cta-btn.secondary:hover { border-color: var(--accent2); background: var(--surface); }
     .container { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
     .gallery-section {
       background: var(--surface);
@@ -295,6 +302,8 @@
       transition: color 0.2s;
     }
     nav.sticky-nav ul li a:hover { color: var(--accent2); text-decoration: none; }
+    nav.sticky-nav ul li a.nav-highlight { color: var(--gold); }
+    nav.sticky-nav ul li a.nav-highlight:hover { color: var(--accent2); }
     footer {
       text-align: center;
       padding: 30px 20px;
@@ -325,6 +334,7 @@
     <li><a href="#electrical">Electrical</a></li>
     <li><a href="#included">Included</a></li>
     <li><a href="#parts-value">Parts Value</a></li>
+    <li><a href="parts.html" class="nav-highlight">Full Parts List</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -351,6 +361,7 @@
     </div>
   </div>
   <a href="#contact" class="cta-btn">Contact About This Car</a>
+  <a href="parts.html" class="cta-btn secondary">Full Parts List</a>
 </div>
 
 <div class="tagline-section">
@@ -410,7 +421,7 @@
       <div class="basics-item"><span class="key">First Owner</span><span class="val">Ford parts manager, daily commuter, meticulous maintenance</span></div>
       <div class="basics-item"><span class="key">Title</span><span class="val">Clean, in hand, same-day transfer</span></div>
       <div class="basics-item"><span class="key">Transmission</span><span class="val">4EAT P2V1 Automatic</span></div>
-      <div class="basics-item"><span class="key">Condition</span><span class="val">Fully runs and drives. No leaks, no oil consumption.</span></div>
+      <div class="basics-item"><span class="key">Condition</span><span class="val">Fully runs and drives. A/C blows cold. No leaks, no oil consumption.</span></div>
       <div class="basics-item"><span class="key">Location</span><span class="val">Gainesville, Florida</span></div>
     </div>
   </div>
@@ -429,10 +440,12 @@
       <ul class="spec-list">
         <li><strong>RatioTek HD valve body</strong> - robust internals, fast shifts under boost, safe for high-power use</li>
         <li>Front Hayden transmission cooler with dedicated filter</li>
-        <li>Valvoline full-synthetic ATF</li>
-        <li>Redline full-synthetic gear fluid in front and rear differentials</li>
+        <li>Valvoline full-synthetic ATF with Redline additive</li>
+        <li>Redline 75W90 full-synthetic gear fluid in front and rear differentials with additive</li>
         <li>Custom poly billet transmission mount by Kein</li>
         <li>Rear LSD</li>
+        <li>Dorman 936-939 serviceable lightweight driveshaft with new boots and joints</li>
+        <li>Kartboy rear subframe lockdown bolts</li>
       </ul>
     </div>
     <div class="spec-group">
@@ -466,7 +479,8 @@
       <ul class="spec-list">
         <li>EJ257 semi-closed deck, nitrided STI crank</li>
         <li>Killer B Motorsport oil baffle and pickup combo, large oil pump</li>
-        <li>Head studs, OEM fire ring head gaskets, all new OEM and OEM+ gaskets throughout</li>
+        <li>ARP head studs, OEM fire ring head gaskets, all new OEM and OEM+ gaskets throughout</li>
+        <li>All steel exhaust manifold gaskets, genuine Subaru air control valve gasket (22659AA120)</li>
         <li>No oil leaks, no oil consumption. No AOS required.</li>
       </ul>
     </div>
@@ -475,6 +489,8 @@
       <ul class="spec-list">
         <li>S20V large port heads, billet half-moons</li>
         <li>IAG 8mm phenolic TGV spacers, IAG billet TGV housings, ported intake manifold</li>
+        <li>Genuine Subaru intake manifold gaskets (14035AA421, pair), phenolic intake manifold gaskets standalone</li>
+        <li>Genuine Subaru camshaft seals set of 4, genuine Subaru crankshaft pulley bolt (12369AA011)</li>
       </ul>
     </div>
     <div class="spec-group">
@@ -490,7 +506,7 @@
       <ul class="spec-list">
         <li>Killer B relocated oil filler neck</li>
         <li>Votex M20x1.5 stainless quick-drain plug with hose, EWK threaded oil funnel</li>
-        <li>All hoses silicone or PTFE with Breeze liner-protected clamps</li>
+        <li>All hoses silicone or PTFE with Breeze liner-protected clamps throughout</li>
       </ul>
     </div>
     <div class="spec-group">
@@ -504,13 +520,15 @@
       <h3>Ignition</h3>
       <ul class="spec-list">
         <li>Race ignition coils with wired-in connectors</li>
-        <li>One step colder Denso platinum plugs</li>
+        <li>One step colder Denso Platinum TT plugs (PK16TT #4503)</li>
         <li>Cylinder 4 modification, throttle body bypass mod</li>
       </ul>
     </div>
     <div class="spec-group">
       <h3>Cooling</h3>
       <ul class="spec-list">
+        <li><strong>Brand new A/C system - blows cold.</strong> A/C pulley belt adjuster kit (DUZFOREI 73131FC000) installed.</li>
+        <li>4-ply custom silicone coolant hoses throughout</li>
         <li>Double-row aluminum radiator, high-pressure caps, fins clean and straight</li>
         <li>Billet overflow tank, right side of radiator</li>
         <li>Zerex Asian Vehicle Blue 50/50 coolant (silicate-free spec for EJ engines)</li>
@@ -552,7 +570,7 @@
       <li>Direct-wired 400 LPH high-pressure fuel pump, corrosion-sealed tank</li>
       <li>Genuine Subaru fuel tank O-ring replaced at install</li>
       <li>40T Performance billet 6061 E85 flex fuel sensor bypass module (6AN and 8AN fittings)</li>
-      <li>GM 3-wire E85 flex fuel sensor</li>
+      <li>GM 3-wire E85 flex fuel sensor, installed and functioning</li>
       <li>Denso 234-5137 wideband AFR sensor</li>
     </ul>
   </div>
@@ -563,10 +581,11 @@
     <div class="section-title">Induction</div>
     <ul class="spec-list">
       <li>Mishimoto MMAB-WRX-01 enclosed airbox, caged and sealed to outside air</li>
-      <li>K&amp;N PL-1003 high-flow filter with FILTERWEARS sand and water protective sock</li>
-      <li>AMR Performance cast turbo inlet pipe, powder coated, includes 2.4" and 3" couplers</li>
-      <li>IAG MAP sensor adapter, red finish</li>
-      <li>IAT sensor with heat-protected mount into TB silicone coupler</li>
+      <li>K&amp;N high-flow filter with FILTERWEARS sand and water protective sock</li>
+      <li>AMR Performance cast forged turbo inlet pipe, prevents cavitation</li>
+      <li>IAG MAP sensor adapter (red) - all MAP sensor and vacuum lines are silicone throughout the engine bay</li>
+      <li>IAT sensor with heat-protected billet mount into TB silicone coupler</li>
+      <li>ECOGARD XC25855 premium cabin air filter</li>
     </ul>
   </div>
 </section>
@@ -575,7 +594,7 @@
   <div class="container">
     <div class="section-title">Turbo, Boost, and Exhaust</div>
     <ul class="spec-list">
-      <li><strong>Turbo:</strong> OEM TD04, pristine, sized to maximize ID1050x injector range</li>
+      <li><strong>Turbo:</strong> OEM TD04, pristine, correctly sized to maximize ID1050x injector range</li>
       <li><strong>FMIC:</strong> Custom professional large bar-and-plate front-mount intercooler, heat-protected pipes, layered silicone couplers</li>
       <li>Front bumper protection netting around entire bumper face</li>
       <li><strong>BOV:</strong> Stock unit, modified for longevity</li>
@@ -609,7 +628,8 @@
     <div class="section-title">Suspension</div>
     <ul class="spec-list">
       <li>KYB AGX adjustable shocks with JDM 2004 STI springs</li>
-      <li>Genuine Subaru Group N front strut mounts, B0310FE000 (2 pairs)</li>
+      <li>Genuine Subaru Group N front strut mounts (B0310FE000, 2 pairs)</li>
+      <li>Group N engine and transmission mount set - reduces flex under load</li>
       <li>Whiteline big sway bar front and rear, Kartboy front and rear sway bar end links</li>
       <li>STI front upper and lower control arms, STI steering knuckles</li>
       <li>JDM top brace, front brace, and under brace (rear brace optional, included)</li>
@@ -625,8 +645,8 @@
   <div class="container">
     <div class="section-title">Brakes</div>
     <ul class="spec-list">
-      <li><strong>Front:</strong> 4-pot calipers with cooling paths preserved</li>
-      <li><strong>Rotors:</strong> ACDelco Silver front, DuraGo rear vented</li>
+      <li><strong>Front:</strong> A-Premium 4-pot caliper assembly, cooling paths preserved</li>
+      <li><strong>Rotors:</strong> ACDelco Silver 18A1340A front, DuraGo BR900374 rear vented</li>
       <li><strong>Pads:</strong> MAGMA ceramic front and rear</li>
       <li><strong>Lines:</strong> Chase Bays stainless braided relocation kit (02-07 WRX/STI w/OEMC)</li>
       <li><strong>Cylinder brace:</strong> GrimmSpeed brake cylinder brace</li>
@@ -685,10 +705,11 @@
   <div class="container">
     <div class="section-title">Electrical</div>
     <ul class="spec-list">
-      <li>6-cylinder 175A alternator with current straightening adapter</li>
+      <li>6-cylinder 175A alternator with current straightening adapter and 3-wire alternator regulator harness pigtail</li>
+      <li>Brand new battery with 1-year warranty</li>
       <li>Marine-grade billet copper battery terminals, all grounds upgraded to high-gauge wire</li>
       <li>Fully rebuilt wiring harness, professional</li>
-      <li><strong>Innovate Motorsports ECB-1 (P/N 39110):</strong> ethanol %, boost, and wideband AFR in one gauge</li>
+      <li><strong>Innovate Motorsports ECB-1 (P/N 39110):</strong> ethanol %, boost, and wideband AFR in one gauge - direct-wired to positive, grounded, connected to ECU TGV left and right inputs</li>
       <li>8ga x2 starter wire and heavy connector</li>
       <li>AstroStart remote start system with security enable</li>
       <li>BT head unit with 40W phone charger, renewed speakers, non-reflective dash cover</li>
@@ -760,36 +781,47 @@
     <div class="section-title">Parts Value Reference</div>
     <div class="callout">
       Parts alone significantly exceed the asking price. Professional labor, custom fabrication, and the custom tune add an estimated <strong>$3,000 to $8,000</strong> in value on top.
+      All values are estimates based on current market pricing. Some items may be missing from this list; this build was documented over time and minor components may not all be captured.
     </div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Part</th><th>Est. Market Value</th></tr></thead>
         <tbody>
-          <tr><td>EJ257 semi-closed deck build (block, nitrided crank, S20V heads, gaskets, hardware)</td><td>$2,500 - $4,000</td></tr>
-          <tr><td>Seibon CWII carbon fiber hood + AeroCatch latches</td><td>~$1,500 - $1,630</td></tr>
-          <tr><td>Custom large-core FMIC (professional build)</td><td>~$1,500 - $2,000</td></tr>
-          <tr><td>JDM 2004 STI front bumper</td><td>~$500 - $1,000</td></tr>
-          <tr><td>Tomei Expreme Equal Length Headers</td><td>~$801 - $890</td></tr>
+          <tr><td>EJ257 semi-closed deck build (block, nitrided crank, S20V heads, all gaskets and hardware)</td><td>~$4,000</td></tr>
+          <tr><td>Seibon CWII carbon fiber hood + AeroCatch latches</td><td>~$1,630</td></tr>
+          <tr><td>Custom large-core bar-and-plate FMIC (professional build)</td><td>~$2,000</td></tr>
+          <tr><td>JDM 2004 STI front bumper</td><td>~$1,000</td></tr>
+          <tr><td>Tomei Expreme Equal Length Headers</td><td>~$890</td></tr>
           <tr><td>Fluidampr EJ harmonic balancer (531101)</td><td>~$483</td></tr>
-          <tr><td>IAG Kevlar timing belt kit</td><td>$599.99</td></tr>
-          <tr><td>Injector Dynamics ID1050x (set of 4)</td><td>~$600 - $700</td></tr>
-          <tr><td>Killer B oil pickup + baffle combo</td><td>~$219</td></tr>
+          <tr><td>IAG Kevlar timing belt kit (belt, idlers, tensioner)</td><td>~$600</td></tr>
+          <tr><td>Injector Dynamics ID1050x set of 4</td><td>~$700</td></tr>
+          <tr><td>Killer B oil pickup + baffle combo</td><td>~$240</td></tr>
           <tr><td>Invidia 3" bellmouth catless downpipe</td><td>~$700</td></tr>
-          <tr><td>Method MR502 VT-Spec 2 forged wheels (set of 4) + spare</td><td>~$1,285 - $1,315</td></tr>
+          <tr><td>Method MR502 VT-Spec 2 forged wheels set of 4 + spare</td><td>~$1,315</td></tr>
           <tr><td>Whiteline front + rear sway bar kit</td><td>~$791</td></tr>
-          <tr><td>GrimmSpeed flex uppipe</td><td>~$270 - $300</td></tr>
-          <tr><td>IAG fuel rails + PTFE lines</td><td>~$370 - $470</td></tr>
-          <tr><td>Aeromotive FPR + filter housing</td><td>~$300 - $365</td></tr>
-          <tr><td>40T Performance E85 bypass module</td><td>$109.98</td></tr>
-          <tr><td>Innovate ECB-1 gauge</td><td>~$361</td></tr>
-          <tr><td>Monstaliner roll-on coating (materials)</td><td>$154 - $250</td></tr>
-          <tr><td>KYB AGX shocks + JDM STI springs</td><td>~$400 - $600</td></tr>
-          <tr><td>Chase Bays brake lines + ABS delete + bias valve</td><td>~$570 - $720</td></tr>
-          <tr><td>DEI turbo blanket</td><td>~$60 - $100</td></tr>
-          <tr><td>Mishimoto MMAB-WRX-01 airbox</td><td>~$157</td></tr>
+          <tr><td>GrimmSpeed 2-bolt flex uppipe</td><td>~$300</td></tr>
+          <tr><td>IAG V3 fuel rails + PTFE lines</td><td>~$420</td></tr>
+          <tr><td>Aeromotive A1000 FPR + 10-micron filter housing</td><td>~$365</td></tr>
+          <tr><td>40T Performance E85 bypass module</td><td>~$110</td></tr>
+          <tr><td>Innovate ECB-1 gauge (P/N 39110)</td><td>~$361</td></tr>
+          <tr><td>Monstaliner roll-on coating (materials)</td><td>~$250</td></tr>
+          <tr><td>KYB AGX shocks + JDM STI springs</td><td>~$600</td></tr>
+          <tr><td>Chase Bays brake lines + ABS delete + bias valve</td><td>~$660</td></tr>
+          <tr><td>Brand new A/C system (full system, blows cold)</td><td>~$400</td></tr>
+          <tr><td>Group N engine and transmission mount set</td><td>~$150</td></tr>
+          <tr><td>Dorman 936-939 lightweight serviceable driveshaft</td><td>~$150</td></tr>
+          <tr><td>Kartboy rear subframe lockdown bolts</td><td>~$60</td></tr>
+          <tr><td>175A alternator with current straightening adapter</td><td>~$300</td></tr>
+          <tr><td>Fully rebuilt professional wiring harness</td><td>~$1,000</td></tr>
+          <tr><td>Mishimoto MMAB-WRX-01 enclosed airbox</td><td>~$157</td></tr>
+          <tr><td>DEI turbo blanket + downpipe wrap</td><td>~$160</td></tr>
+          <tr><td>1/4" T6061 aluminum skid plate set (3 pieces)</td><td>~$500</td></tr>
+          <tr><td>Tuning laptop + ECU software + Tactrix Openport cable</td><td>~$400</td></tr>
+          <tr><td>EJ205 core engine (included spare)</td><td>~$600</td></tr>
         </tbody>
       </table>
     </div>
+    <p style="color:var(--muted);font-size:0.82rem;margin-top:14px;">Values are approximate current market estimates. Some components not individually listed above are still present on the car. See <a href="parts.html">Full Parts List</a> for the complete itemized spreadsheet with part numbers.</p>
   </div>
 </section>
 
@@ -823,6 +855,7 @@
 <footer>
   <p>2002 Subaru WRX &bull; Gainesville, Florida &bull; $15,000 OBO</p>
   <p style="margin-top:8px;">All modifications documented. Tuning files, ECU software, Tactrix Openport cable, and specialty tools transfer with the car.</p>
+  <p style="margin-top:8px;"><a href="parts.html">View Full Parts List with Part Numbers and Values</a></p>
 </footer>
 
 </body>
